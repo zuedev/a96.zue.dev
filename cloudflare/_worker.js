@@ -1,14 +1,3 @@
-function apiHandler(pathname) {
-  switch (pathname) {
-    case "/api/hello":
-      return new Response("Hello, world!");
-    case "/api/goodbye":
-      return new Response("Goodbye, world!");
-    default:
-      return new Response("Not found", { status: 404 });
-  }
-}
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -18,3 +7,21 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
+function apiHandler(pathname) {
+  switch (pathname) {
+    case "/api/hello":
+      return Respond("Hello, world!");
+    case "/api/goodbye":
+      return Respond("Goodbye, world!");
+    default:
+      return Respond("Not found", { status: 404 });
+  }
+}
+
+function Respond(response, options = {}) {
+  if (typeof response === "string")
+    response = JSON.stringify({ message: response });
+
+  return new Response(response, options);
+}
