@@ -45,6 +45,11 @@ export default function Home() {
             <Socials
               socials={[
                 {
+                  href: "https://discord.gg/5HGZA59Csx",
+                  icon: "https://cdn.simpleicons.org/discord",
+                  title: "Discord",
+                },
+                {
                   href: "https://x.com/area96digital",
                   icon: "https://cdn.simpleicons.org/x/fff",
                   title: "X/Twitter",
@@ -55,7 +60,7 @@ export default function Home() {
                   title: "X/Twitter",
                 },
                 {
-                  href: "https://github.com/zuedev/area96.digital",
+                  href: "https://github.com/area96-digital",
                   icon: "https://cdn.simpleicons.org/github/fff",
                   title: "GitHub",
                 },
