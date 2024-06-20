@@ -76,13 +76,13 @@ export default () => {
               className="flex flex-col items-center space-y-4 p-4 bg-black"
             >
               <img src={talent.image} alt={talent.name} />
-              <h2 className="text-2xl font-bold">{talent.name}</h2>
+              <h2 className="text-4xl font-bold">{talent.name}</h2>
               <div className="flex flex-row space-x-4">
                 {talent.socials.map((social) => (
                   <a href={social.href} key={social.href}>
                     <img
                       src={`${social.icon}`}
-                      className="h-6"
+                      className="h-8"
                       title={social.title}
                     />
                   </a>
