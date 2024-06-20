@@ -20,6 +20,11 @@ const talent = [
         icon: "https://cdn.simpleicons.org/x/fff",
         title: "X/Twitter",
       },
+      {
+        href: "https://yayjaybae.carrd.co",
+        icon: "https://cdn.simpleicons.org/carrd",
+        title: "Carrd",
+      },
     ],
   },
 ];
