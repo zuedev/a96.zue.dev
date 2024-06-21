@@ -45,7 +45,10 @@ function PreviewTalentCards() {
           <div key={index}>
             {
               <div className="flex flex-col items-center space-y-4 p-4 bg-black">
-                <img src="https://placehold.co/500x500.png" alt="Open Slot" />
+                <img
+                  src="https://placehold.co/500x500/333/fff.png"
+                  alt="Open Slot"
+                />
                 <h2 className="text-4xl font-bold">PREVIEW_NAME</h2>
                 <div className="flex flex-row space-x-4">
                   <a href="#">
