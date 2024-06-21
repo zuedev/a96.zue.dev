@@ -1,3 +1,6 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
 import NavBar from "@/components/NavBar";
 
 const talent = [
@@ -29,31 +32,39 @@ const talent = [
   },
 ];
 
-// for (let index = 0; index < 5; index++) {
-//   talent.push({
-//     name: "Open Slot",
-//     image: "https://placehold.co/500x500.png",
-//     socials: [
-//       {
-//         href: "#",
-//         icon: "https://cdn.simpleicons.org/twitch",
-//         title: "Twitch",
-//       },
-//       {
-//         href: "#",
-//         icon: "https://cdn.simpleicons.org/youtube",
-//         title: "YouTube",
-//       },
-//       {
-//         href: "#",
-//         icon: "https://cdn.simpleicons.org/x/fff",
-//         title: "X/Twitter",
-//       },
-//     ],
-//   });
-// }
+const PreviewTalentCard = (
+  <div className="flex flex-col items-center space-y-4 p-4 bg-black">
+    <img src="https://placehold.co/500x500.png" alt="Open Slot" />
+    <h2 className="text-4xl font-bold">PREVIEW_NAME</h2>
+    <div className="flex flex-row space-x-4">
+      <a href="#">
+        <img
+          src="https://cdn.simpleicons.org/twitch"
+          className="h-8"
+          title="Twitch"
+        />
+      </a>
+      <a href="#">
+        <img
+          src="https://cdn.simpleicons.org/youtube"
+          className="h-8"
+          title="YouTube"
+        />
+      </a>
+      <a href="#">
+        <img
+          src="https://cdn.simpleicons.org/x/fff"
+          className="h-8"
+          title="X/Twitter"
+        />
+      </a>
+    </div>
+  </div>
+);
 
 export default () => {
+  const searchParams = useSearchParams();
+
   return (
     <>
       <NavBar />
@@ -95,6 +106,10 @@ export default () => {
               </div>
             </div>
           ))}
+          {searchParams.has("preview") &&
+            Array.from({
+              length: searchParams.get("preview") || 6 - talent.length,
+            }).map((_, index) => <div key={index}>{PreviewTalentCard}</div>)}
         </div>
       </main>
     </>
