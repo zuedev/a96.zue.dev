@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import NavBar from "@/components/NavBar";
 
 const talent = [
@@ -106,10 +107,12 @@ export default () => {
               </div>
             </div>
           ))}
-          {searchParams.has("preview") &&
-            Array.from({
-              length: searchParams.get("preview") || 6 - talent.length,
-            }).map((_, index) => <div key={index}>{PreviewTalentCard}</div>)}
+          <Suspense>
+            {searchParams.has("preview") &&
+              Array.from({
+                length: searchParams.get("preview") || 6 - talent.length,
+              }).map((_, index) => <div key={index}>{PreviewTalentCard}</div>)}
+          </Suspense>
         </div>
       </main>
     </>
