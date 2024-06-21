@@ -33,39 +33,52 @@ const talent = [
   },
 ];
 
-const PreviewTalentCard = (
-  <div className="flex flex-col items-center space-y-4 p-4 bg-black">
-    <img src="https://placehold.co/500x500.png" alt="Open Slot" />
-    <h2 className="text-4xl font-bold">PREVIEW_NAME</h2>
-    <div className="flex flex-row space-x-4">
-      <a href="#">
-        <img
-          src="https://cdn.simpleicons.org/twitch"
-          className="h-8"
-          title="Twitch"
-        />
-      </a>
-      <a href="#">
-        <img
-          src="https://cdn.simpleicons.org/youtube"
-          className="h-8"
-          title="YouTube"
-        />
-      </a>
-      <a href="#">
-        <img
-          src="https://cdn.simpleicons.org/x/fff"
-          className="h-8"
-          title="X/Twitter"
-        />
-      </a>
-    </div>
-  </div>
-);
-
-export default () => {
+function PreviewTalentCards() {
   const searchParams = useSearchParams();
 
+  return (
+    <>
+      {searchParams.has("preview") &&
+        Array.from({
+          length: searchParams.get("preview") || 6 - talent.length,
+        }).map((_, index) => (
+          <div key={index}>
+            {
+              <div className="flex flex-col items-center space-y-4 p-4 bg-black">
+                <img src="https://placehold.co/500x500.png" alt="Open Slot" />
+                <h2 className="text-4xl font-bold">PREVIEW_NAME</h2>
+                <div className="flex flex-row space-x-4">
+                  <a href="#">
+                    <img
+                      src="https://cdn.simpleicons.org/twitch"
+                      className="h-8"
+                      title="Twitch"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="https://cdn.simpleicons.org/youtube"
+                      className="h-8"
+                      title="YouTube"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="https://cdn.simpleicons.org/x/fff"
+                      className="h-8"
+                      title="X/Twitter"
+                    />
+                  </a>
+                </div>
+              </div>
+            }
+          </div>
+        ))}
+    </>
+  );
+}
+
+export default () => {
   return (
     <>
       <NavBar />
@@ -108,10 +121,7 @@ export default () => {
             </div>
           ))}
           <Suspense>
-            {searchParams.has("preview") &&
-              Array.from({
-                length: searchParams.get("preview") || 6 - talent.length,
-              }).map((_, index) => <div key={index}>{PreviewTalentCard}</div>)}
+            <PreviewTalentCards />
           </Suspense>
         </div>
       </main>
