@@ -3,10 +3,12 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import NavBar from "@/components/NavBar";
+import TalentCard from "@/components/TalentCard";
 
 const talent = [
   {
     name: "YayJayBae",
+    description: "Twitch Streamer and YouTuber",
     image: "/talent/yayjaybae.png",
     socials: [
       {
@@ -42,40 +44,19 @@ function PreviewTalentCards() {
         Array.from({
           length: searchParams.get("preview") || 6 - talent.length,
         }).map((_, index) => (
-          <div key={index}>
-            {
-              <div className="flex flex-col items-center space-y-4 p-4 bg-black">
-                <img
-                  src="https://placehold.co/500x500/333/fff.png"
-                  alt="Open Slot"
-                />
-                <h2 className="text-4xl font-bold">PREVIEW_NAME</h2>
-                <div className="flex flex-row space-x-4">
-                  <a href="#">
-                    <img
-                      src="https://cdn.simpleicons.org/twitch"
-                      className="h-8"
-                      title="Twitch"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="https://cdn.simpleicons.org/youtube"
-                      className="h-8"
-                      title="YouTube"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="https://cdn.simpleicons.org/x/fff"
-                      className="h-8"
-                      title="X/Twitter"
-                    />
-                  </a>
-                </div>
-              </div>
-            }
-          </div>
+          <TalentCard
+            key={index}
+            name="Talent Name"
+            description="Talent Description"
+            image="/placeholder_500x500.png"
+            socials={[
+              {
+                href: "https://example.com",
+                icon: "https://cdn.simpleicons.org/x/fff",
+                title: "X/Example",
+              },
+            ]}
+          />
         ))}
     </>
   );
@@ -104,24 +85,13 @@ export default () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {talent.map((talent) => (
-            <div
+            <TalentCard
               key={talent.name}
-              className="flex flex-col items-center space-y-4 p-4 bg-black"
-            >
-              <img src={talent.image} alt={talent.name} />
-              <h2 className="text-4xl font-bold">{talent.name}</h2>
-              <div className="flex flex-row space-x-4">
-                {talent.socials.map((social) => (
-                  <a href={social.href} key={social.href}>
-                    <img
-                      src={`${social.icon}`}
-                      className="h-8"
-                      title={social.title}
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
+              name={talent.name}
+              description={talent.description}
+              image={talent.image}
+              socials={talent.socials}
+            />
           ))}
           <Suspense>
             <PreviewTalentCards />
