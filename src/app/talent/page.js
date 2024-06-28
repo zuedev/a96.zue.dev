@@ -8,7 +8,7 @@ import TalentCard from "@/components/TalentCard";
 const talent = [
   {
     name: "YayJayBae",
-    description: "Twitch Streamer and YouTuber",
+    description: "Twitch VTuber and YouTuber",
     image: "/talent/yayjaybae.png",
     socials: [
       {
