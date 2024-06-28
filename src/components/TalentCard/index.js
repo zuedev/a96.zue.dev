@@ -11,14 +11,14 @@ export default function TalentCard(props) {
   return (
     <CardContainer className="bg-black p-8">
       <CardBody className="flex flex-col items-center space-y-4">
-        <CardItem translateZ={100}>
+        <CardItem translateZ={60}>
           <img src={props.image} alt={props.name} />
         </CardItem>
         <div className="flex flex-col items-center">
-          <CardItem translateZ={50}>
+          <CardItem translateZ={20}>
             <h2 className="text-4xl font-bold text-center">{props.name}</h2>
           </CardItem>
-          <CardItem translateZ={60}>
+          <CardItem translateZ={40}>
             <p className="text-justify">{props.description}</p>
           </CardItem>
         </div>
