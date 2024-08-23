@@ -8,8 +8,9 @@ import TalentCard from "@/components/TalentCard";
 const talent = [
   {
     name: "YayJayBae",
-    description: "Twitch VTuber and YouTuber",
+    description: "Bat Dragon Vtuber",
     image: "/talent/yayjaybae.png",
+    href: "https://yayjaybae.com",
     socials: [
       {
         href: "https://www.twitch.tv/yayjaybae",
@@ -27,9 +28,47 @@ const talent = [
         title: "X/Twitter",
       },
       {
-        href: "https://yayjaybae.carrd.co",
-        icon: "https://cdn.simpleicons.org/carrd",
-        title: "Carrd",
+        href: "https://www.tiktok.com/@yayjaybae",
+        icon: "https://cdn.simpleicons.org/tiktok/fff",
+        title: "TikTok",
+      },
+      {
+        href: "https://discord.gg/emrjUtKbUR",
+        icon: "https://cdn.simpleicons.org/discord",
+        title: "Discord",
+      },
+    ],
+  },
+  {
+    name: "JustAWoney",
+    description: "Existential Horror Vtuber",
+    image: "/talent/justawoney.png",
+    href: "https://linktr.ee/justawoney",
+    socials: [
+      {
+        href: "https://www.twitch.tv/justawoney",
+        icon: "https://cdn.simpleicons.org/twitch",
+        title: "Twitch",
+      },
+      {
+        href: "https://twitter.com/justawoney",
+        icon: "https://cdn.simpleicons.org/x/fff",
+        title: "X/Twitter",
+      },
+      {
+        href: "https://www.youtube.com/@JustAWoney",
+        icon: "https://cdn.simpleicons.org/youtube",
+        title: "YouTube",
+      },
+      {
+        href: "https://www.tiktok.com/@justawoney",
+        icon: "https://cdn.simpleicons.org/tiktok/fff",
+        title: "TikTok",
+      },
+      {
+        href: "https://discord.gg/t8GQsat32Y",
+        icon: "https://cdn.simpleicons.org/discord",
+        title: "Discord",
       },
     ],
   },
@@ -85,13 +124,7 @@ export default () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {talent.map((talent) => (
-            <TalentCard
-              key={talent.name}
-              name={talent.name}
-              description={talent.description}
-              image={talent.image}
-              socials={talent.socials}
-            />
+            <TalentCard {...talent} />
           ))}
           <Suspense>
             <PreviewTalentCards />
