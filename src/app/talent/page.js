@@ -72,6 +72,34 @@ const talent = [
       },
     ],
   },
+  {
+    name: "TygiWygi",
+    description: "Floofy Tiger Monstergirl",
+    image: "/talent/tygiwygi.jpg",
+    href: "https://tygismaragd.carrd.co",
+    socials: [
+      {
+        href: "https://www.youtube.com/@TygiWygi",
+        icon: "https://cdn.simpleicons.org/youtube",
+        title: "YouTube",
+      },
+      {
+        href: "https://twitter.com/TygiWygi",
+        icon: "https://cdn.simpleicons.org/x/fff",
+        title: "X/Twitter",
+      },
+      {
+        href: "https://www.twitch.tv/tygiwygi",
+        icon: "https://cdn.simpleicons.org/twitch",
+        title: "Twitch",
+      },
+      {
+        href: "https://discord.gg/eh8WGUt5uy",
+        icon: "https://cdn.simpleicons.org/discord",
+        title: "Discord",
+      },
+    ],
+  },
 ];
 
 function PreviewTalentCards() {
