@@ -20,7 +20,7 @@ export default function NavLinks(props) {
     // },
     {
       text: "Contact",
-      href: "mailto:contact@area96.digital",
+      href: "https://formbricks.area96.digital/s/cm1u35zbs000c14c0ruflq2ni",
     },
   ];
 
