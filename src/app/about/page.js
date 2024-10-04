@@ -30,11 +30,9 @@ export default () => {
           <p className="text-lg">
             We don't charge our clients upfront fees or an hourly rate. Instead,
             we take a percentage of the revenue generated above a certain
-            threshold. This means that we only make money when our clients make
-            money, so we are highly motivated to help them succeed. Our success
-            is directly tied to the success of our clients, so we are committed
-            to providing the best possible service and support to help them
-            achieve their goals.
+            threshold. Our success is directly tied to the success of our
+            clients, so we are committed to providing the best possible service
+            and support to help them achieve their goals.
           </p>
         </div>
 
