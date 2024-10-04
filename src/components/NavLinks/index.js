@@ -5,6 +5,10 @@ export default function NavLinks(props) {
     //   href: "/",
     // },
     {
+      text: "About",
+      href: "/about",
+    },
+    {
       text: "Talent",
       href: "/talent",
     },
