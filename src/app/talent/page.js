@@ -100,6 +100,29 @@ const talent = [
       },
     ],
   },
+  {
+    name: "NarikoNabi",
+    description: "The North Star",
+    image: "/talent/nari.png",
+    href: "https://tygismaragd.carrd.co",
+    socials: [
+      {
+        href: "https://twitter.com/NarikoNabi",
+        icon: "https://cdn.simpleicons.org/x/fff",
+        title: "X/Twitter",
+      },
+      {
+        href: "https://www.twitch.tv/narikonabi",
+        icon: "https://cdn.simpleicons.org/twitch",
+        title: "Twitch",
+      },
+      {
+        href: "https://www.youtube.com/@BlackVirtualEntertainment",
+        icon: "https://cdn.simpleicons.org/youtube",
+        title: "YouTube",
+      },
+    ],
+  },
 ];
 
 function PreviewTalentCards() {
