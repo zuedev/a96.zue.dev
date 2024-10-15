@@ -1,73 +1,67 @@
-import NavBar from "@/components/NavBar";
-
 export default () => {
   return (
     <>
-      <NavBar />
-      <main className="space-y-8 text-justify p-8">
-        <div className="space-y-4 max-w-prose mx-auto">
-          <h1 className="text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
-            About
-          </h1>
-          <p className="text-lg">
-            Area96 Digital is a digital marketing and full-service talent
-            management agency that specializes in helping creators and
-            influencers grow their online presence. We're a team of passionate
-            management specialists who are dedicated to empowering creators to
-            reach their full potential without sacrificing their creative
-            freedom. We provide the tools, resources, and support needed to help
-            creators elevate their brand and connect with their audience on a
-            deeper level. From social media management to brand partnerships, we
-            offer a wide range of services to help creators succeed in the
-            digital space.
-          </p>
+      <section className="container mx-auto px-4 py-16 space-y-8 text-justify">
+        <h1 className="text-6xl font-bold text-center">About Area96 Digital</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold">The Company</h2>
+            <p>
+              Area96 Digital is a digital marketing and full-service talent
+              management agency that specializes in helping creators and
+              influencers grow their online presence.
+            </p>
+            <p>
+              We provide a range of services, including social media management,
+              content creation, and influencer marketing. Our team is dedicated
+              to helping you achieve your goals and reach your full potential.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold">The People</h2>
+            <p>
+              Our team is made up of talented individuals with a passion for
+              digital marketing and social media. We are committed to helping
+              you succeed and grow your online presence.
+            </p>
+            <p>
+              Whether you are a creator looking to expand your reach or a brand
+              looking to connect with influencers, we can help you achieve your
+              goals. Our team is dedicated to providing you with personalized
+              solutions that meet your needs and exceed your expectations.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold">The Mission</h2>
+            <p>
+              Our mission is to help creators and influencers succeed in the
+              digital world. We believe that everyone has a unique voice and
+              story to share, and we are here to help you tell yours.
+            </p>
+            <p>
+              We are committed to providing you with the tools and resources you
+              need to grow your online presence and connect with your audience.
+              Whether you are just starting out or looking to take your career
+              to the next level, we are here to help you succeed.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold">The Vision</h2>
+            <p>
+              Our vision is to create a world where creators and influencers can
+              thrive and succeed. We believe that everyone has the potential to
+              make a positive impact on the world, and we are here to help you
+              achieve your goals.
+            </p>
+            <p>
+              We are dedicated to providing you with the support and guidance
+              you need to reach your full potential and make your mark on the
+              digital world. Whether you are a creator, influencer, or brand, we
+              are here to help you succeed.
+            </p>
+          </div>
         </div>
-
-        <div className="space-y-4 max-w-prose mx-auto">
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-500">
-            Our business is your success.
-          </h2>
-          <p className="text-lg">
-            We don't charge our clients upfront fees or an hourly rate. Instead,
-            we take a percentage of the revenue generated above a certain
-            threshold. Our success is directly tied to the success of our
-            clients, so we are committed to providing the best possible service
-            and support to help them achieve their goals.
-          </p>
-        </div>
-
-        <div className="space-y-4 max-w-prose mx-auto">
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
-            Creativity and freedom above all.
-          </h2>
-          <p className="text-lg">
-            Traditional talent management agencies often prioritize profit over
-            the well-being of their clients. At Area96 Digital, we believe that
-            creators should have the freedom to express themselves authentically
-            without being constrained by corporate interests. Our grassroots
-            approach to talent management focuses on nurturing creativity and
-            fostering a supportive environment where creators can thrive. We
-            work closely with our clients to develop personalized strategies
-            that align with their values and goals, ensuring that they have the
-            tools and resources they need to succeed.
-          </p>
-        </div>
-
-        <div className="space-y-4 max-w-prose mx-auto">
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500">
-            Open-source... Everything!
-          </h2>
-          <p className="text-lg">
-            Not only is all of our software open-source, but we also believe in
-            the power of transparency and collaboration. We are committed to
-            sharing our knowledge and resources with the community to help
-            others succeed. This approach allows us to build stronger
-            relationships with our clients and partners and fosters a sense of
-            trust and accountability. We believe that by working together, we
-            can achieve great things and make a positive impact on the world.
-          </p>
-        </div>
-      </main>
+      </section>
     </>
   );
 };

@@ -1,22 +1,43 @@
-import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { Inter } from "next/font/google";
+
+import MainNav from "../components/MainNav.js";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
-  title:
-    "Area96 Digital | Open-source management services for the post-modern era. ✨",
-  description:
-    "From art publishing to influencer marketing, we provide the tools and services to help you manage your digital presence with ease. Our aim is to help you focus on what you do best, while we take care of the rest.",
+  title: "Area96 Digital | Open-Source Talent Management ✨",
+  description: "Take the next step in your digital career with confidence.",
   icons: {
-    icon: "/logo96.png",
+    icon: "/logo.png",
   },
 };
 
-export default function RootLayout({ children }) {
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+export default ({ children }) => {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} dark:bg-black dark:text-white`}
+    >
+      <body>
+        <header>
+          <MainNav />
+        </header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
     </html>
   );
-}
+};

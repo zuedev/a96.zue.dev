@@ -2,18 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  background: #111;
-  color: white;
+@layer components {
+  .a96-bg-gradient-text {
+    @apply bg-gradient-to-br from-green-500 to-blue-500 bg-clip-text text-transparent;
+  }
 }
 
-/* hide scrollbar */
 body::-webkit-scrollbar {
   display: none;
 }
-
-/* .area96gradientText {
-  background: linear-gradient(135deg, #0ff, #0f0 50%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
