@@ -15,4 +15,4 @@ deploy_to_cloudflare_pages:
     - echo "Copying Cloudflare files..."
     - cp -r cloudflare/* out/
     - echo "Deploying to Cloudflare Pages..."
-    - npx wrangler pages publish ./out --project-name $CLOUDFLARE_PROJECT_NAME
+    - npx wrangler pages deploy ./out --project-name $CLOUDFLARE_PROJECT_NAME --branch $CI_COMMIT_REF_NAME
