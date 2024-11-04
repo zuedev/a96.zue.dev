@@ -2,18 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  background: #111;
-  color: white;
+:root {
+  --area96RainbowGradient: linear-gradient(
+    90deg,
+    #00f,
+    #0f0 25%,
+    #ff0 50%,
+    #f00
+  );
 }
 
 /* hide scrollbar */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
-/* .area96gradientText {
-  background: linear-gradient(135deg, #0ff, #0f0 50%);
+.area96RainbowGradientBackground {
+  background: var(--area96RainbowGradient);
+}
+
+.area96RainbowGradientText {
+  background: var(--area96RainbowGradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+}

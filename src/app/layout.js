@@ -1,22 +1,28 @@
-import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+import Navigation from "@/components/Navigation.js";
+
+const MonaspaceNeonVarVF = localFont({
+  src: "./fonts/MonaspaceNeonVarVF.woff2",
+  display: "swap",
+});
 
 export const metadata = {
-  title:
-    "Area96 Digital | Open-source management services for the post-modern era. ✨",
-  description:
-    "From art publishing to influencer marketing, we provide the tools and services to help you manage your digital presence with ease. Our aim is to help you focus on what you do best, while we take care of the rest.",
-  icons: {
-    icon: "/logo96.png",
-  },
+  title: "Area96 Digital",
+  description: "Open-source full-service management for the modern era. ✨",
 };
 
-export default function RootLayout({ children }) {
+export default ({ children }) => {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+    <html lang="en" className={`${MonaspaceNeonVarVF.className} antialiased`}>
+      <body>
+        <header>
+          <Navigation />
+        </header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
     </html>
   );
-}
+};
