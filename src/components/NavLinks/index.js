@@ -24,7 +24,7 @@ export default function NavLinks(props) {
     // },
     {
       text: "Contact",
-      href: "https://formbricks.area96.digital/s/cm1u35zbs000c14c0ruflq2ni",
+      href: "/contact",
     },
   ];
 
