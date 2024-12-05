@@ -13,9 +13,8 @@ export default function NavLinks(props) {
       href: "/talent",
     },
     // {
-    //   text: "Blog",
-    //   href: "https://blog.area96.digital",
-    //   target: "_blank",
+    //   text: "Merch",
+    //   href: "/alpha/merch",
     // },
     // {
     //   text: "Handbook",
