@@ -1,4 +1,3 @@
-import VideoBackground from "@/components/VideoBackground";
 import NavLinks from "@/components/NavLinks";
 import Socials from "@/components/Socials";
 import A96Line from "@/components/A96Line";
@@ -8,7 +7,23 @@ import "./page.css";
 export default function Home() {
   return (
     <>
-      <VideoBackground src="4124198-hd_1920_1080_24fps.mp4" type="video/mp4" />
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        style={{
+          objectFit: "cover",
+          width: "100vw",
+          height: "100vh",
+          position: "fixed",
+          top: "0",
+          left: "0",
+          zIndex: "-1",
+        }}
+      >
+        <source src="4124198-hd_1920_1080_24fps.mp4" type="video/mp4" />
+      </video>
       <div className="flex flex-col p-4 min-h-full">
         <main className="space-y-4 max-w-prose text-justify grow">
           <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
