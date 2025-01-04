@@ -104,7 +104,7 @@ const talent = [
     name: "NarikoNabi",
     description: "The North Star",
     image: "/talent/nari.png",
-    href: "https://tygismaragd.carrd.co",
+    href: "#",
     socials: [
       {
         href: "https://twitter.com/NarikoNabi",
@@ -120,6 +120,34 @@ const talent = [
         href: "https://www.youtube.com/@BlackVirtualEntertainment",
         icon: "https://cdn.simpleicons.org/youtube",
         title: "YouTube",
+      },
+    ],
+  },
+  {
+    name: "Sweets",
+    description: "Cyberpunk Catgirl Fixer",
+    image: "/talent/sweets.jpeg",
+    href: "#",
+    socials: [
+      {
+        href: "https://twitch.tv/vtSweets",
+        icon: "https://cdn.simpleicons.org/twitch",
+        title: "Twitch",
+      },
+      {
+        href: "https://x.com/vtubersweets",
+        icon: "https://cdn.simpleicons.org/x/fff",
+        title: "X/Twitter",
+      },
+      {
+        href: "https://bsky.app/profile/vtubersweets.bsky.social",
+        icon: "https://cdn.simpleicons.org/bluesky",
+        title: "BlueSky",
+      },
+      {
+        href: "https://www.tiktok.com/@vt.sweets",
+        icon: "https://cdn.simpleicons.org/tiktok/fff",
+        title: "TikTok",
       },
     ],
   },
