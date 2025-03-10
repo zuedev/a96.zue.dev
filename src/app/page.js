@@ -27,7 +27,7 @@ export default () => {
                   title: "X/Twitter",
                 },
                 {
-                  href: "https://bsky.app/profile/area96.digital",
+                  href: "https://bsky.app/profile/a96.zue.dev",
                   icon: "https://cdn.simpleicons.org/bluesky/black",
                   title: "Bluesky",
                 },
