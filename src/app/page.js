@@ -1,50 +1,72 @@
-import NavLinks from "@/components/NavLinks";
-import Socials from "@/components/Socials";
-import A96Line from "@/components/A96Line";
-
-import "./page.css";
+import Link from "next/link";
 
 export default () => {
   return (
     <>
-      <video
-        playsInline
-        autoPlay
-        muted
-        loop
-        style={{
-          objectFit: "cover",
-          width: "100vw",
-          height: "100vh",
-          position: "fixed",
-          top: "0",
-          left: "0",
-          zIndex: "-1",
-        }}
-      >
-        <source src="4124198-hd_1920_1080_24fps.mp4" type="video/mp4" />
-      </video>
-      <div className="flex flex-col p-4 min-h-full">
-        <main className="space-y-4 max-w-prose text-justify grow">
-          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
-            Area96 Digital
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-col space-y-4 bg-green-400 p-4">
+          <h1 className="text-4xl font-bold">
+            Area96, where creatives thrive.
           </h1>
-          <blockquote className="text-lg">
-            Open-source full-service management services for the post-modern
-            era. ✨
-          </blockquote>
+
           <p className="text-lg">
-            From art publishing to influencer marketing, we provide the tools
-            and services to help you manage your digital presence with ease. Our
-            aim is to help you focus on what you do best, while we take care of
-            the rest.
+            Ditch the digital chaos and unleash your creative power! We're your
+            open-source, all-in-one management powerhouse, designed for the
+            modern creator. Whether you're publishing groundbreaking art or
+            building a booming influencer empire, we provide the seamless tools
+            and services you need to conquer your online world, so you can focus
+            on your passion, not the paperwork.
           </p>
-          <A96Line />
-          <div className="flex flex-row justify-between">
-            <NavLinks />
-            <Socials />
+
+          <div className="flex justify-between items-center">
+            <div className="flex flex-row gap-4">
+              {[
+                {
+                  href: "https://x.com/area96digital",
+                  icon: "https://cdn.simpleicons.org/x/black",
+                  title: "X/Twitter",
+                },
+                {
+                  href: "https://bsky.app/profile/area96.digital",
+                  icon: "https://cdn.simpleicons.org/bluesky/black",
+                  title: "Bluesky",
+                },
+              ].map((social) => (
+                <Link
+                  href={social.href}
+                  key={social.title}
+                  className="transform hover:scale-110 transition-transform"
+                >
+                  <img
+                    src={`${social.icon}`}
+                    className="h-[2rem] w-[2rem] object-contain"
+                    alt={social.title}
+                    title={social.title}
+                  />
+                </Link>
+              ))}
+            </div>
+
+            <span className="text-xs opacity-50">
+              "Area96" is made with ♥ by{" "}
+              <a href="https://zue.dev" target="_blank" className="underline">
+                zue.dev
+              </a>
+            </span>
           </div>
-        </main>
+        </div>
+
+        <div className="flex flex-col space-y-4 bg-yellow-400 p-4">
+          <h2 className="text-4xl font-bold">This is another card</h2>
+        </div>
+
+        <div className="flex flex-col space-y-4 bg-pink-400 p-4">
+          <h2 className="text-4xl font-bold">This is another card</h2>
+        </div>
+
+        <div className="flex flex-col space-y-4 bg-cyan-400 p-4">
+          <h2 className="text-4xl font-bold">This is another card</h2>
+        </div>
       </div>
     </>
   );
