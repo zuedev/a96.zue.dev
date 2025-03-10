@@ -3,7 +3,7 @@ import Link from "next/link";
 export default () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="flex flex-col items-center justify-center min-h-screen max-w-3xl mx-auto">
         <div className="flex flex-col space-y-4 bg-green-400 p-4">
           <h1 className="text-4xl font-bold">
             Area96, where creatives thrive.
@@ -47,25 +47,13 @@ export default () => {
               ))}
             </div>
 
-            <span className="text-xs opacity-50">
+            <span className="text-xs opacity-50 text-right">
               "Area96" is made with ♥ by{" "}
               <a href="https://zue.dev" target="_blank" className="underline">
                 zue.dev
               </a>
             </span>
           </div>
-        </div>
-
-        <div className="flex flex-col space-y-4 bg-yellow-400 p-4">
-          <h2 className="text-4xl font-bold">This is another card</h2>
-        </div>
-
-        <div className="flex flex-col space-y-4 bg-pink-400 p-4">
-          <h2 className="text-4xl font-bold">This is another card</h2>
-        </div>
-
-        <div className="flex flex-col space-y-4 bg-cyan-400 p-4">
-          <h2 className="text-4xl font-bold">This is another card</h2>
         </div>
       </div>
     </>
