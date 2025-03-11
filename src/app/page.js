@@ -1,24 +1,16 @@
 import Link from "next/link";
+import { metadata } from "./layout";
 
 export default () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen max-w-3xl mx-auto">
         <div className="flex flex-col space-y-4 bg-green-400 p-4">
-          <h1 className="text-4xl font-bold">
-            Area96, where creatives thrive.
-          </h1>
+          <h1 className="text-4xl font-bold">{metadata.title}</h1>
 
-          <p className="text-lg">
-            Ditch the digital chaos and unleash your creative power! We're your
-            open-source, all-in-one management powerhouse, designed for the
-            modern creator. Whether you're publishing groundbreaking art or
-            building a booming influencer empire, we provide the seamless tools
-            and services you need to conquer your online world, so you can focus
-            on your passion, not the paperwork.
-          </p>
+          <p className="text-lg">{metadata.description}</p>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center gap-4">
             <div className="flex flex-row gap-4">
               {[
                 {
@@ -27,7 +19,7 @@ export default () => {
                   title: "X/Twitter",
                 },
                 {
-                  href: "https://bsky.app/profile/a96.zue.dev",
+                  href: "https://bsky.app/profile/96.zue.dev",
                   icon: "https://cdn.simpleicons.org/bluesky/black",
                   title: "Bluesky",
                 },
@@ -47,9 +39,9 @@ export default () => {
               ))}
             </div>
 
-            <span className="text-xs opacity-50 text-right">
-              "Area96" is made with ♥ by{" "}
-              <a href="https://zue.dev" target="_blank" className="underline">
+            <span className="text-xs opacity-50 text-right p-1">
+              "96" is made with ❤️ by{" "}
+              <a href="https://zue.dev" target="_blank">
                 zue.dev
               </a>
             </span>
