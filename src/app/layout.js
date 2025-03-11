@@ -4,6 +4,7 @@ import { Space_Mono } from "next/font/google";
 const mainFont = Space_Mono({
   weight: ["400", "700"],
   style: ["normal", "italic"],
+  subsets: ["latin-ext"],
   display: "swap",
 });
 
