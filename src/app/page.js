@@ -5,7 +5,7 @@ export default () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen max-w-3xl mx-auto">
-        <div className="flex flex-col space-y-4 bg-green-400 p-4">
+        <div className="flex flex-col space-y-4 p-4">
           <h1 className="text-4xl font-bold">{metadata.title}</h1>
 
           <p className="text-lg">{metadata.description}</p>
