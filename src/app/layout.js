@@ -9,6 +9,7 @@ const mainFont = Space_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://96.zue.dev"),
   title: "96: Where creatives thrive.",
   description:
     "Experience a fresh, open-source revolution in digital empowerment. We fuse influencer marketing with post-modern innovation into a full-service online talent management platform—designed so you can shine while we handle every digital detail.",
