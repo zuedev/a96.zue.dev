@@ -7,15 +7,15 @@ export default () => {
     <div className="bg-linear-to-br from-green-500 to-emerald-500">
       <div className="flex flex-col items-center justify-center min-h-screen max-w-3xl mx-auto">
         <div className="flex flex-col space-y-4 p-4">
-          <FadeIn props={{ duration: 1, delay: 0.25 }}>
+          <FadeIn props={{ delay: 0.25 }}>
             <h1 className="text-4xl font-bold">{metadata.title}</h1>
           </FadeIn>
 
-          <FadeIn props={{ duration: 1, delay: 0.5 }}>
+          <FadeIn props={{ delay: 0.5 }}>
             <p className="text-lg">{metadata.description}</p>
           </FadeIn>
 
-          <FadeIn props={{ duration: 1, delay: 0.75 }}>
+          <FadeIn props={{ delay: 0.75 }}>
             <div className="flex justify-between items-center gap-4">
               <div className="flex flex-row gap-4">
                 {[
