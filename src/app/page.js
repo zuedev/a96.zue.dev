@@ -36,7 +36,7 @@ export default () => {
                     className="transform hover:scale-110 transition-transform"
                   >
                     <img
-                      src={`${social.icon}`}
+                      src={social.icon}
                       className="h-[2rem] w-[2rem] object-contain"
                       alt={social.title}
                       title={social.title}
