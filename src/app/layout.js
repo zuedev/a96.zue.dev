@@ -20,7 +20,10 @@ export const metadata = {
 
 export default ({ children }) => {
   return (
-    <html lang="en" className={`${mainFont.className} `}>
+    <html
+      lang="en"
+      className={`${mainFont.className} bg-linear-to-br from-green-500 to-emerald-500 text-black min-h-screen`}
+    >
       <body>{children}</body>
     </html>
   );
